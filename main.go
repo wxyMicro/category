@@ -41,9 +41,9 @@ func main() {
 
 	//获取mysql配置,路径中不带前缀
 	mysqlInfo := common.GetMysqlFromConsul(consulConfig, "mysql")
-
 	//连接数据库
-	db, err := gorm.Open("mysql", mysqlInfo.User+":"+mysqlInfo.Pwd+"@/"+mysqlInfo.Database+"?charset=utf8&parseTime=True&loc=Local")
+	db, err := gorm.Open("mysql", mysqlInfo.User+":"+mysqlInfo.Pwd+"@("+mysqlInfo.Host+")/"+mysqlInfo.Database+"?charset=utf8mb4&parseTime=True&loc=Local")
+
 	if err != nil {
 		log.Error(err)
 	}

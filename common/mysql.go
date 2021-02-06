@@ -23,6 +23,6 @@ type MysqlConfig struct {
 //获取 mysql 的配置
 func GetMysqlFromConsul(config config.Config, path ...string) *MysqlConfig {
 	mysqlConfig := &MysqlConfig{}
-	config.Get(path...).Scan(mysqlConfig)
+	_ = config.Get(path...).Scan(mysqlConfig)
 	return mysqlConfig
 }

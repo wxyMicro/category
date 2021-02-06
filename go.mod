@@ -9,4 +9,5 @@ require (
 	github.com/micro/go-plugins/config/source/consul/v2 v2.9.1
 	github.com/micro/go-plugins/registry/consul/v2 v2.9.1 // indirect
 	github.com/prometheus/common v0.6.0
+	golang.org/x/tools v0.0.0-20191216173652-a0e659d51361
 )
